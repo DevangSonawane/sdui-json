@@ -8,77 +8,252 @@
     }
   },
   "body": {
-    "type": "singleChildScrollView",
+    "type": "container",
+    "color": "#FFF7ED",
     "child": {
-      "type": "padding",
-      "padding": {
-        "left": 16,
-        "top": 16,
-        "right": 16,
-        "bottom": 16
-      },
+      "type": "singleChildScrollView",
       "child": {
-        "type": "column",
-        "crossAxisAlignment": "start",
-        "spacing": 16,
-        "children": [
-          {
-            "type": "image",
-            "src": "https://picsum.photos/900/360",
-            "imageType": "network",
-            "height": 180,
-            "fit": "cover",
-            "semanticLabel": "Banner image"
-          },
-          {
-            "type": "text",
-            "data": "Welcome to server-driven UI",
-            "style": {
-              "fontSize": 24,
-              "fontWeight": "bold"
-            }
-          },
-          {
-            "type": "listView",
-            "shrinkWrap": true,
-            "physics": "never",
-            "children": [
-              {
-                "type": "listTile",
-                "title": {
-                  "type": "text",
-                  "data": "Offline first"
-                },
-                "subtitle": {
-                  "type": "text",
-                  "data": "This screen is loaded from assets/home.json."
+        "type": "padding",
+        "padding": {
+          "left": 16,
+          "top": 16,
+          "right": 16,
+          "bottom": 24
+        },
+        "child": {
+          "type": "column",
+          "crossAxisAlignment": "stretch",
+          "spacing": 16,
+          "children": [
+            {
+              "type": "container",
+              "padding": {
+                "left": 18,
+                "top": 18,
+                "right": 18,
+                "bottom": 18
+              },
+              "decoration": {
+                "color": "#2563EB",
+                "borderRadius": {
+                  "topLeft": 18,
+                  "topRight": 18,
+                  "bottomLeft": 18,
+                  "bottomRight": 18
                 }
               },
-              {
-                "type": "listTile",
-                "title": {
-                  "type": "text",
-                  "data": "Server ready"
-                },
-                "subtitle": {
-                  "type": "text",
-                  "data": "Set kScreenUrl to load the same schema from your API."
-                }
+              "child": {
+                "type": "column",
+                "crossAxisAlignment": "start",
+                "spacing": 12,
+                "children": [
+                  {
+                    "type": "image",
+                    "src": "https://picsum.photos/seed/stac-home/900/360",
+                    "imageType": "network",
+                    "height": 170,
+                    "fit": "cover",
+                    "semanticLabel": "Colorful banner"
+                  },
+                  {
+                    "type": "text",
+                    "data": "Explore this SDUI demo",
+                    "style": {
+                      "color": "#FFFFFF",
+                      "fontSize": 28,
+                      "fontWeight": "bold"
+                    }
+                  },
+                  {
+                    "type": "text",
+                    "data": "These cards are JSON-driven. Each button pushes a different screen from GitHub.",
+                    "style": {
+                      "color": "#DBEAFE",
+                      "fontSize": 16
+                    }
+                  }
+                ]
+              }
+            },
+            {
+              "type": "card",
+              "color": "#FFFFFF",
+              "elevation": 2,
+              "margin": {
+                "left": 0,
+                "top": 0,
+                "right": 0,
+                "bottom": 0
               },
-              {
-                "type": "listTile",
-                "title": {
-                  "type": "text",
-                  "data": "Fallback included"
+              "child": {
+                "type": "padding",
+                "padding": {
+                  "left": 16,
+                  "top": 16,
+                  "right": 16,
+                  "bottom": 16
                 },
-                "subtitle": {
-                  "type": "text",
-                  "data": "If the network screen fails, the asset screen is shown."
+                "child": {
+                  "type": "column",
+                  "crossAxisAlignment": "start",
+                  "spacing": 10,
+                  "children": [
+                    {
+                      "type": "text",
+                      "data": "Details",
+                      "style": {
+                        "color": "#7C2D12",
+                        "fontSize": 22,
+                        "fontWeight": "bold"
+                      }
+                    },
+                    {
+                      "type": "text",
+                      "data": "Open a content page with a large image and paragraph copy.",
+                      "style": {
+                        "color": "#57534E",
+                        "fontSize": 15
+                      }
+                    },
+                    {
+                      "type": "elevatedButton",
+                      "onPressed": {
+                        "actionType": "navigate",
+                        "navigationStyle": "push",
+                        "request": {
+                          "url": "https://raw.githubusercontent.com/DevangSonawane/sdui-json/main/details.json",
+                          "method": "get"
+                        }
+                      },
+                      "child": {
+                        "type": "text",
+                        "data": "View details"
+                      }
+                    }
+                  ]
                 }
               }
-            ]
-          }
-        ]
+            },
+            {
+              "type": "card",
+              "color": "#ECFDF5",
+              "elevation": 2,
+              "margin": {
+                "left": 0,
+                "top": 0,
+                "right": 0,
+                "bottom": 0
+              },
+              "child": {
+                "type": "padding",
+                "padding": {
+                  "left": 16,
+                  "top": 16,
+                  "right": 16,
+                  "bottom": 16
+                },
+                "child": {
+                  "type": "column",
+                  "crossAxisAlignment": "start",
+                  "spacing": 10,
+                  "children": [
+                    {
+                      "type": "text",
+                      "data": "Profile",
+                      "style": {
+                        "color": "#065F46",
+                        "fontSize": 22,
+                        "fontWeight": "bold"
+                      }
+                    },
+                    {
+                      "type": "text",
+                      "data": "See a simple user profile rendered from another JSON file.",
+                      "style": {
+                        "color": "#047857",
+                        "fontSize": 15
+                      }
+                    },
+                    {
+                      "type": "elevatedButton",
+                      "onPressed": {
+                        "actionType": "navigate",
+                        "navigationStyle": "push",
+                        "request": {
+                          "url": "https://raw.githubusercontent.com/DevangSonawane/sdui-json/main/profile.json",
+                          "method": "get"
+                        }
+                      },
+                      "child": {
+                        "type": "text",
+                        "data": "Open profile"
+                      }
+                    }
+                  ]
+                }
+              }
+            },
+            {
+              "type": "card",
+              "color": "#F5F3FF",
+              "elevation": 2,
+              "margin": {
+                "left": 0,
+                "top": 0,
+                "right": 0,
+                "bottom": 0
+              },
+              "child": {
+                "type": "padding",
+                "padding": {
+                  "left": 16,
+                  "top": 16,
+                  "right": 16,
+                  "bottom": 16
+                },
+                "child": {
+                  "type": "column",
+                  "crossAxisAlignment": "start",
+                  "spacing": 10,
+                  "children": [
+                    {
+                      "type": "text",
+                      "data": "Settings",
+                      "style": {
+                        "color": "#5B21B6",
+                        "fontSize": 22,
+                        "fontWeight": "bold"
+                      }
+                    },
+                    {
+                      "type": "text",
+                      "data": "Open a settings-style list screen and pop back home.",
+                      "style": {
+                        "color": "#6D28D9",
+                        "fontSize": 15
+                      }
+                    },
+                    {
+                      "type": "elevatedButton",
+                      "onPressed": {
+                        "actionType": "navigate",
+                        "navigationStyle": "push",
+                        "request": {
+                          "url": "https://raw.githubusercontent.com/DevangSonawane/sdui-json/main/settings.json",
+                          "method": "get"
+                        }
+                      },
+                      "child": {
+                        "type": "text",
+                        "data": "Open settings"
+                      }
+                    }
+                  ]
+                }
+              }
+            }
+          ]
+        }
       }
     }
   }

@@ -1,0 +1,83 @@
+{
+  "type": "scaffold",
+  "appBar": {
+    "type": "appBar",
+    "title": {
+      "type": "text",
+      "data": "Details"
+    }
+  },
+  "body": {
+    "type": "container",
+    "color": "#EFF6FF",
+    "child": {
+      "type": "singleChildScrollView",
+      "child": {
+        "type": "padding",
+        "padding": {
+          "left": 18,
+          "top": 18,
+          "right": 18,
+          "bottom": 24
+        },
+        "child": {
+          "type": "column",
+          "crossAxisAlignment": "stretch",
+          "spacing": 16,
+          "children": [
+            {
+              "type": "text",
+              "data": "Details from the server",
+              "style": {
+                "color": "#1D4ED8",
+                "fontSize": 28,
+                "fontWeight": "bold"
+              }
+            },
+            {
+              "type": "image",
+              "src": "https://picsum.photos/seed/stac-details/900/420",
+              "imageType": "network",
+              "height": 220,
+              "fit": "cover",
+              "semanticLabel": "Details image"
+            },
+            {
+              "type": "card",
+              "color": "#FFFFFF",
+              "elevation": 1,
+              "child": {
+                "type": "padding",
+                "padding": {
+                  "left": 16,
+                  "top": 16,
+                  "right": 16,
+                  "bottom": 16
+                },
+                "child": {
+                  "type": "text",
+                  "data": "This page was loaded with a Navigate action that contains a network request. You can update this JSON in GitHub, restart the app, and see the screen change without editing Flutter widgets.",
+                  "style": {
+                    "color": "#1E3A8A",
+                    "fontSize": 16
+                  }
+                }
+              }
+            },
+            {
+              "type": "elevatedButton",
+              "onPressed": {
+                "actionType": "navigate",
+                "navigationStyle": "pop"
+              },
+              "child": {
+                "type": "text",
+                "data": "Back"
+              }
+            }
+          ]
+        }
+      }
+    }
+  }
+}

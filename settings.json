@@ -1,0 +1,107 @@
+{
+  "type": "scaffold",
+  "appBar": {
+    "type": "appBar",
+    "title": {
+      "type": "text",
+      "data": "Settings"
+    }
+  },
+  "body": {
+    "type": "container",
+    "color": "#F5F3FF",
+    "child": {
+      "type": "singleChildScrollView",
+      "child": {
+        "type": "padding",
+        "padding": {
+          "left": 18,
+          "top": 18,
+          "right": 18,
+          "bottom": 24
+        },
+        "child": {
+          "type": "column",
+          "crossAxisAlignment": "stretch",
+          "spacing": 16,
+          "children": [
+            {
+              "type": "text",
+              "data": "Settings loaded from JSON",
+              "style": {
+                "color": "#5B21B6",
+                "fontSize": 28,
+                "fontWeight": "bold"
+              }
+            },
+            {
+              "type": "card",
+              "color": "#FFFFFF",
+              "elevation": 1,
+              "child": {
+                "type": "column",
+                "children": [
+                  {
+                    "type": "listTile",
+                    "title": {
+                      "type": "text",
+                      "data": "Notifications"
+                    },
+                    "subtitle": {
+                      "type": "text",
+                      "data": "Weekly SDUI updates"
+                    }
+                  },
+                  {
+                    "type": "listTile",
+                    "title": {
+                      "type": "text",
+                      "data": "Theme"
+                    },
+                    "subtitle": {
+                      "type": "text",
+                      "data": "Purple cloud"
+                    }
+                  },
+                  {
+                    "type": "listTile",
+                    "title": {
+                      "type": "text",
+                      "data": "Data source"
+                    },
+                    "subtitle": {
+                      "type": "text",
+                      "data": "GitHub raw JSON"
+                    }
+                  },
+                  {
+                    "type": "listTile",
+                    "title": {
+                      "type": "text",
+                      "data": "Offline fallback"
+                    },
+                    "subtitle": {
+                      "type": "text",
+                      "data": "Bundled local JSON for home"
+                    }
+                  }
+                ]
+              }
+            },
+            {
+              "type": "elevatedButton",
+              "onPressed": {
+                "actionType": "navigate",
+                "navigationStyle": "pop"
+              },
+              "child": {
+                "type": "text",
+                "data": "Back"
+              }
+            }
+          ]
+        }
+      }
+    }
+  }
+}

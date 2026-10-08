@@ -1,0 +1,134 @@
+{
+  "type": "scaffold",
+  "appBar": {
+    "type": "appBar",
+    "title": {
+      "type": "text",
+      "data": "Profile"
+    }
+  },
+  "body": {
+    "type": "container",
+    "color": "#ECFDF5",
+    "child": {
+      "type": "singleChildScrollView",
+      "child": {
+        "type": "padding",
+        "padding": {
+          "left": 18,
+          "top": 18,
+          "right": 18,
+          "bottom": 24
+        },
+        "child": {
+          "type": "column",
+          "crossAxisAlignment": "stretch",
+          "spacing": 16,
+          "children": [
+            {
+              "type": "container",
+              "padding": {
+                "left": 20,
+                "top": 22,
+                "right": 20,
+                "bottom": 22
+              },
+              "decoration": {
+                "color": "#047857",
+                "borderRadius": {
+                  "topLeft": 20,
+                  "topRight": 20,
+                  "bottomLeft": 20,
+                  "bottomRight": 20
+                }
+              },
+              "child": {
+                "type": "column",
+                "crossAxisAlignment": "center",
+                "spacing": 12,
+                "children": [
+                  {
+                    "type": "circleAvatar",
+                    "foregroundImage": "https://picsum.photos/seed/stac-profile/300/300",
+                    "radius": 48
+                  },
+                  {
+                    "type": "text",
+                    "data": "Devang Sonawane",
+                    "style": {
+                      "color": "#FFFFFF",
+                      "fontSize": 26,
+                      "fontWeight": "bold"
+                    }
+                  },
+                  {
+                    "type": "text",
+                    "data": "Flutter SDUI Explorer",
+                    "style": {
+                      "color": "#D1FAE5",
+                      "fontSize": 16
+                    }
+                  }
+                ]
+              }
+            },
+            {
+              "type": "card",
+              "color": "#FFFFFF",
+              "elevation": 1,
+              "child": {
+                "type": "column",
+                "children": [
+                  {
+                    "type": "listTile",
+                    "title": {
+                      "type": "text",
+                      "data": "Role"
+                    },
+                    "subtitle": {
+                      "type": "text",
+                      "data": "Mobile app builder"
+                    }
+                  },
+                  {
+                    "type": "listTile",
+                    "title": {
+                      "type": "text",
+                      "data": "Favorite stack"
+                    },
+                    "subtitle": {
+                      "type": "text",
+                      "data": "Flutter + Stac + GitHub JSON"
+                    }
+                  },
+                  {
+                    "type": "listTile",
+                    "title": {
+                      "type": "text",
+                      "data": "Demo status"
+                    },
+                    "subtitle": {
+                      "type": "text",
+                      "data": "Profile screen loaded remotely"
+                    }
+                  }
+                ]
+              }
+            },
+            {
+              "type": "elevatedButton",
+              "onPressed": {
+                "actionType": "navigate",
+                "navigationStyle": "pop"
+              },
+              "child": {
+                "type": "text",
+                "data": "Back"
+              }
+            }
+          ]
+        }
+      }
+    }
+  }
+}
