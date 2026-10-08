@@ -1,0 +1,85 @@
+{
+  "type": "scaffold",
+  "appBar": {
+    "type": "appBar",
+    "title": {
+      "type": "text",
+      "data": "My SDUI App"
+    }
+  },
+  "body": {
+    "type": "singleChildScrollView",
+    "child": {
+      "type": "padding",
+      "padding": {
+        "left": 16,
+        "top": 16,
+        "right": 16,
+        "bottom": 16
+      },
+      "child": {
+        "type": "column",
+        "crossAxisAlignment": "start",
+        "spacing": 16,
+        "children": [
+          {
+            "type": "image",
+            "src": "https://picsum.photos/900/360",
+            "imageType": "network",
+            "height": 180,
+            "fit": "cover",
+            "semanticLabel": "Banner image"
+          },
+          {
+            "type": "text",
+            "data": "Welcome to server-driven UI",
+            "style": {
+              "fontSize": 24,
+              "fontWeight": "bold"
+            }
+          },
+          {
+            "type": "listView",
+            "shrinkWrap": true,
+            "physics": "never",
+            "children": [
+              {
+                "type": "listTile",
+                "title": {
+                  "type": "text",
+                  "data": "Offline first"
+                },
+                "subtitle": {
+                  "type": "text",
+                  "data": "This screen is loaded from assets/home.json."
+                }
+              },
+              {
+                "type": "listTile",
+                "title": {
+                  "type": "text",
+                  "data": "Server ready"
+                },
+                "subtitle": {
+                  "type": "text",
+                  "data": "Set kScreenUrl to load the same schema from your API."
+                }
+              },
+              {
+                "type": "listTile",
+                "title": {
+                  "type": "text",
+                  "data": "Fallback included"
+                },
+                "subtitle": {
+                  "type": "text",
+                  "data": "If the network screen fails, the asset screen is shown."
+                }
+              }
+            ]
+          }
+        ]
+      }
+    }
+  }
+}
